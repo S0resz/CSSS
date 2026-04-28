@@ -1,194 +1,243 @@
-/* ===== CORREÇÕES PRINCIPAIS FEITAS =====
-1. Adicionados ; faltando
-2. Removidas chaves } extras
-3. Corrigido font-weight:none -> normal
-4. Corrigido media query inválida
-5. Removidos @keyframes duplicados
-6. Ajustados blocos quebrados
-====================================== */
+/* CORREÇÕES APENAS DE SINTAXE */
 
-
-/* CHAT BOX */
-div#chatMessageContainer {
-	border: none !important;
-	border-radius: 10px !important;
-	box-shadow: 2px 1px 4px 2px #1e1e76 !important;
+/* 1 */
+.container.main{
+border-radius:10px;
 }
 
-
-/* COMMENTS */
-div.comment {
-	background: none !important;
-	border-bottom: 1px solid #f5e5d1;
-	font-weight: normal;
+/* 2 */
+.col-md-9{
+border-radius:0px 10px 0px 10px;
 }
 
-
-/* LION IMAGE */
-div#lion_image {
-	opacity: .8;
-	box-shadow: 1px 1px 5px var(--darkgray) !important;
-	border-radius: 20% !important;
-	overflow: hidden;
-	margin-top: 15px;
-	margin-left: 12px;
-	width: 300px;
-	height: 200px;
-	border: 10px double #f2a1f2;
-	animation: mymove 5s infinite;
+/* 3 */
+.navbar{
+border-radius:10px;
 }
 
-div#lion_image:hover {
-	opacity: 1;
-	box-shadow: 1px 1px 5px var(--darkgray) !important;
-	transition: .7s !important;
+/* 4 */
+.navbar li a:hover{
+border-radius:10px;
 }
 
-
-/* PLAYER IMAGE */
-table#player img {
-	opacity: .8;
-	box-shadow: 1px 1px 5px var(--darkgray) !important;
-	border-radius: 20% !important;
-	overflow: hidden;
-	width: 190px;
-	height: 150px;
-	border: 10px double #f2a1f2;
-	animation: mymove 5s infinite;
+/* 5 */
+.breadcrumb{
+border-radius:10px;
 }
 
-table#player img:hover {
-	opacity: 1;
-	box-shadow: 1px 1px 5px var(--darkgray) !important;
-	transition: .7s !important;
+/* 6 */
+.breadcrumb::after{
+z-index:100;
 }
 
-
-/* BORDER ANIMATION */
-@keyframes mymove {
-	50% {
-		border: 10px double #1e1e76;
-	}
+/* 7 */
+@media only screen and (max-width:1199px) and (min-width:992px){
+.breadcrumb::after{
+right:20%;
+}
 }
 
-
-/* CAVE IMAGES */
-img[src$="cavedefault.jpg"],
-img[src$="caveunused.jpg"] {
-	content: url("https://i.pinimg.com/736x/23/6e/10/236e10857703944a7ecbc29a24e76f42.jpg") !important;
-	height: 150px !important;
-	border-radius: 10px 10px 0px 0px;
+/* 8 */
+@media only screen and (max-width:991px) and (min-width:768px){
+.breadcrumb::after{
+right:20%;
+}
 }
 
-
-/* BANNERS */
-img[src$="nestingbanner.png"],
-img[src$="overviewbanner.png"],
-img[src$="unsortedlionsbanner.png"] {
-	content: url("https://i.pinimg.com/736x/a6/f2/c2/a6f2c242dcec457e35bc6869f55f9703.jpg") !important;
-	height: 100px !important;
+/* 9 */
+@media only screen and (max-width:767px){
+.breadcrumb::after{
+right:22%;
+}
 }
 
-
-/* MOUND GRID */
-.mound-grid img {
-	background: url("https://i.pinimg.com/736x/a6/f2/c2/a6f2c242dcec457e35bc6869f55f9703.jpg");
-	border-radius: 10px;
-	width: 0;
-	height: 0;
-	padding-top: 50px;
-	padding-right: 150px;
+/* 10 */
+h2{
+text-align:center;
 }
 
-
-/* MOBILE FIX */
-@media only screen and (max-width: 767px) {
-	.container.main .hidden-xs {
-		display: block !important;
-	}
+/* 11 */
+h3{
+font-size:14px !important;
 }
 
-
-/* TABLET FIX */
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-	.container.main .hidden-sm {
-		display: block !important;
-	}
+/* 12 */
+.progress{
+border-radius:10px !important;
 }
 
-
-/* LARGE SCREEN QUOTE */
-@media only screen and (min-width: 1200px) {
-	div.quote {
-		width: 790px;
-	}
+/* 13 */
+.progress-bar{
+border-radius:10px !important;
 }
 
-
-/* CUSTOM BOX */
-.scroll {
-	background-color: var(--third-color) !important;
-	border: none;
-	float: left;
-	width: 45%;
-	color: #a195f9;
-	height: 300px;
-	padding: 20px;
-	box-shadow: 2px 1px 4px 2px #1e1e76 !important;
-	font-family: "Chewy", serif;
-	margin: -50px 1px 20px 8px;
-	font-size: 20px;
-	overflow-y: auto !important;
-	border-radius: 10px;
+/* 14 */
+.s-chat-message:nth-child(even){
+border:none !important;
 }
 
-
-/* LINKS BAR */
-.links {
-	background-color: var(--first-color) !important;
-	float: left;
-	width: 100%;
-	height: 60px;
-	margin: 10px;
-	margin-bottom: 10px;
-	margin-top: -40px;
-	margin-left: 0px;
-	padding: 18px;
-	color: #f2a1f2;
-	font-family: "Chewy", serif;
-	text-align: center;
-	font-size: 17px;
-	border-radius: 10px 10px 0px 0px;
+/* 15 */
+.s-chat-message:nth-child(odd){
+border:none !important;
 }
 
-
-/* CREDIT */
-.credit {
-	text-align: center;
-	float: left;
-	margin-left: 190px;
-	color: #f2a1f2;
-	margin-top: -85px;
-	font-family: "Chewy", serif;
-	vertical-align: bottom;
+/* 16 */
+.s-chat-message__pinned{
+border:none !important;
 }
 
-
-/* BACKGROUND BOX */
-.backgroundimg {
-	background: url(https://cdn.wallpapersafari.com/79/75/cYDHCb.jpg) center;
-	background-size: cover;
-	width: 70%;
-	height: 420px;
-	border: none;
-	border-radius: 3%;
-	border-spacing: 0;
-	border-collapse: collapse;
-	box-shadow: 2px 1px 4px 2px #1e1e76 !important;
+/* 17 */
+div#chatMessageContainer{
+border:none !important;
+border-radius:10px !important;
+box-shadow:2px 1px 4px 2px #1e1e76!important;
 }
 
+/* 18 */
+button#label_currentChannel{
+border:none !important;
+}
 
-/* CURSOR */
-* {
-	cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol26.cur), auto !important;
+/* 19 */
+div.comment{
+font-weight:normal;
+}
+
+/* 20 */
+.table{
+border-radius:10px !important;
+}
+
+/* 21 */
+th,.top,.bottom{
+border-radius:10px !important;
+}
+
+/* 22 */
+td.bottom a{
+text-decoration:none !important;
+}
+
+/* 23 */
+.inner-table .left{
+border-radius:10px !important;
+}
+
+/* 24 */
+.inner-table .right{
+border-radius:10px !important;
+}
+
+/* 25 */
+td.right{
+border-radius:10px !important;
+}
+
+/* 26 */
+.cave-grid,.mound-grid{
+border-radius:10px !important;
+}
+
+/* 27 */
+.feature{
+border-radius:10px !important;
+}
+
+/* 28 */
+.feature,div.left{
+border-radius:10px !important;
+}
+
+/* 29 */
+.table .left{
+border-radius:10px !important;
+}
+
+/* 30 */
+input,select,textarea{
+text-shadow:none !important;
+}
+
+/* 31 */
+.item-header{
+border-radius:10px !important;
+}
+
+/* 32 */
+.item{
+border-radius:10px !important;
+}
+
+/* 33 */
+div.slider.round{
+background:#fffbfc!important;
+}
+
+/* 34 */
+div.container.footer.center.white.visible-lg.visible-md.visible-sm,
+div.container.footer.center.white.visible-lg.visible-md.visible-sm a{
+text-shadow:none !important;
+}
+
+/* 35 */
+::-webkit-scrollbar{
+width:10px;
+}
+
+/* 36 */
+::-webkit-scrollbar-thumb{
+border-radius:10px !important;
+}
+
+/* 37 */
+div#lion_image{
+margin-left:12px;
+width:300px;
+height:200px;
+animation:mymove 5s infinite;
+}
+
+/* REMOVIDA CHAVE EXTRA */
+
+/* 38 */
+table#player img{
+overflow:hidden;
+width:190px;
+height:150px;
+animation:mymove 5s infinite;
+}
+
+/* REMOVIDA CHAVE EXTRA */
+
+/* 39 */
+img[src$="cavedefault.jpg"]{
+border-radius:10px 10px 0px 0px;
+}
+
+/* 40 */
+img[src$="caveunused.jpg"]{
+border-radius:10px 10px 0px 0px;
+}
+
+/* 41 */
+.mound-grid img{
+padding-right:150px;
+}
+
+/* 42 */
+/* MEDIA QUERY ORIGINAL ESTAVA INVÁLIDA */
+@media only screen and (max-width:991px) and (min-width:768px){
+.container.main{
+display:block !important;
+}
+}
+
+/* 43 */
+.scroll{
+border-radius:10px;
+}
+
+/* 44 */
+.links{
+border-radius:10px 10px 0px 0px;
 }
