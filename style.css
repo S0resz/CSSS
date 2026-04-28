@@ -1,243 +1,770 @@
-/* CORREÇÕES APENAS DE SINTAXE */
 
-/* 1 */
-.container.main{
-border-radius:10px;
-}
 
-/* 2 */
-.col-md-9{
-border-radius:0px 10px 0px 10px;
-}
+/* FONT (From Google Fonts) */
 
-/* 3 */
-.navbar{
-border-radius:10px;
-}
 
-/* 4 */
-.navbar li a:hover{
-border-radius:10px;
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+
+:root {
+  --first-color: rgb(112, 127, 245,.5);
+  --second-color: rgb(161, 149, 249,.5);
+  --third-color:rgb(242, 161, 242,.5);
+  --background-color: rgb(30, 30, 118,.4);
+  --text-color: #f2a1f2;
+  --text-color-2: #a195f9;
 }
 
-/* 5 */
-.breadcrumb{
-border-radius:10px;
+
+/* BACKGROUND */
+
+
+body {
+	background: url('https://i.pinimg.com/originals/99/b6/e4/99b6e4e2c73b364ba7eb804678137942.jpg')center fixed;
+	background-size: 100%;
+  font-family: "Chewy", serif;
+  color: var(--text-color)!important;
 }
 
-/* 6 */
-.breadcrumb::after{
-z-index:100;
+
+/* MAIN PANEL */
+
+
+/* RIGHT SIDE */
+.container.main {
+  background-color: var(--background-color);
+box-shadow: 1px 1px 10px 5px #1e1e76!important;
+border-radius: 10px
 }
 
-/* 7 */
-@media only screen and (max-width:1199px) and (min-width:992px){
-.breadcrumb::after{
-right:20%;
-}
+
+/* LEFT SIDE */
+.col-md-9 {
+  background-color: var(--second-color);
+        border-right: none;
+border-radius: 0px 10px 0px 10px
 }
 
-/* 8 */
-@media only screen and (max-width:991px) and (min-width:768px){
-.breadcrumb::after{
-right:20%;
-}
+
+/* TOPBAR ("Welcome back, ___") */
+
+
+.topbar {
+  background-color: var(--first-color);
+	border: none;
+	border-top: none;
+  color: var(--text-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border-radius: 10px;
 }
 
-/* 9 */
-@media only screen and (max-width:767px){
-.breadcrumb::after{
-right:22%;
-}
-}
 
-/* 10 */
-h2{
-text-align:center;
-}
+/* NAVBAR (Den/Crossroads/Etc.) */
 
-/* 11 */
-h3{
-font-size:14px !important;
+
+.navbar {
+  background:none;
+	border-bottom: none;
+  color: var(--text-color)!important;
+	border-radius: 10px;
+	border-radius: 10px
 }
 
-/* 12 */
-.progress{
-border-radius:10px !important;
+
+/* NAVBAR BUTTON TEXT COLOR */
+
+
+.navbar li a {
+  color: var(--text-color)!important;
 }
 
-/* 13 */
-.progress-bar{
-border-radius:10px !important;
+
+/* NAVBAR BUTTON HOVER */
+
+
+.navbar li a:hover {
+  background-color: var(--second-color)!important;
+	border-bottom: none;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+margin-top: -5px;
+  color: var(--text-color)!important;
+		border-radius: 10px}
+
+
+/* BREADCRUMB (Home / Den) */
+
+
+.breadcrumb {
+  background-color: var(--third-color)!important;
+        border: none;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border-radius: 10px
 }
 
-/* 14 */
-.s-chat-message:nth-child(even){
-border:none !important;
+
+/* BREADCRUMB TEXT */
+
+
+.breadcrumb .active {
+  color: var(--text-color)!important;
 }
 
-/* 15 */
-.s-chat-message:nth-child(odd){
-border:none !important;
+
+/* CSS CREDIT */
+
+
+.breadcrumb::after {
+        content: "CSS by Stardust to Stardust (#161123)";
+  color: var(--text-color)!important;
+        position: absolute;
+        right: 13%; /* (This may need adjusting) */
+        z-index: 100
+    }
+
+
+@media only screen and (max-width: 1199px) and (min-width: 992px)  {
+        .breadcrumb::after {
+            right: 20%
+        }
+    }
+
+
+    @media only screen and (max-width: 991px) and (min-width: 768px)  {
+        .breadcrumb::after {
+            right: 20%
+        }
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        .breadcrumb::after {
+            right: 22%
+        }
+    }
+
+
+/* BOOKMARK BUTTON */
+
+
+input.floatright, input.floatright:hover {
+  background-color: var(--third-color)!important;
+        border: none !important;
+		border-radius: 10px;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+  color: var(--text-color)!important;
 }
 
-/* 16 */
-.s-chat-message__pinned{
-border:none !important;
+
+/* ALERTS (ie. "Your lionesses have returned from hunting!") */
+
+
+.alert,
+.alert-warning,
+.alert-danger {
+  background-color: var(--third-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border: none;
+  color: var(--text-color)!important;
+		border-radius: 10px;
 }
 
-/* 17 */
-div#chatMessageContainer{
-border:none !important;
-border-radius:10px !important;
-box-shadow:2px 1px 4px 2px #1e1e76!important;
+
+/* BIGGEST HEADER ("___"'s DEN) */
+
+
+h1 {
+  color: var(--text-color)!important;
+	font-size: 90px;
+	text-align: center;
+  font-family: "Chewy", serif;
 }
 
-/* 18 */
-button#label_currentChannel{
-border:none !important;
+
+
+
+/* MEDIUM HEADER */
+
+
+h2 {
+  color: var(--text-color)!important;
+	font-size: 24px;
+	text-align: center
 }
 
-/* 19 */
-div.comment{
-font-weight:normal;
+
+
+
+/* SMALL HEADER */
+
+
+h3 {
+  color: var(--text-color)!important;
+	font-size: 14px !important
 }
 
-/* 20 */
-.table{
-border-radius:10px !important;
+
+/* RIGHT SIDE PANEL HEADER */
+
+
+.sidebar h3 {
+  color: var(--text-color)!important;
+        font-size: 26px !important;
+  font-family: "Chewy", serif;
 }
 
-/* 21 */
-th,.top,.bottom{
-border-radius:10px !important;
+
+/* RIGHT SIDE PANELS */
+.panel {
+  background-color: var(--second-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border: none !important;
+  color: var(--text-color)!important;
+		border-radius: 10px;
 }
 
-/* 22 */
-td.bottom a{
-text-decoration:none !important;
+
+/* ENERGY BAR BACKGROUND */
+.progress {
+  background-color: var(--third-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+  color: var(--text-color)!important;
+	border-radius: 10px !important
 }
 
-/* 23 */
-.inner-table .left{
-border-radius:10px !important;
+
+/* ENERGY BAR COLOR */
+.progress-bar {
+  background-color: var(--first-color)!important;
+  color: var(--text-color)!important;
+	border-radius: 10px !important
 }
 
-/* 24 */
-.inner-table .right{
-border-radius:10px !important;
+
+/* ENERGY BAR TEXT */
+.progress div {
+  color: var(--text-color)!important;
 }
 
-/* 25 */
-td.right{
-border-radius:10px !important;
+
+/* CHAT */
+
+
+.s-chat-message:nth-child(even) /* Even Numbered Messages */ {
+  background-color: var(--third-color)!important;
+  color: var(--text-color)!important;
+	border: none !important
 }
 
-/* 26 */
-.cave-grid,.mound-grid{
-border-radius:10px !important;
+
+.s-chat-message:nth-child(odd) /* Odd Numbered Messages */ {
+  background-color: var(--third-color)!important;
+  color: var(--text-color)!important;
+	border: none !important
 }
 
-/* 27 */
-.feature{
-border-radius:10px !important;
+
+.s-chat-message__pinned /* Pinned Message */ {
+  background-color: var(--third-color)!important;
+  color: var(--text-color)!important;
+	border: none !important
 }
 
-/* 28 */
-.feature,div.left{
-border-radius:10px !important;
+
+.s-chat-message_timestamp /* Timestamps */ {
+  color: var(--text-color)!important;
 }
 
-/* 29 */
-.table .left{
-border-radius:10px !important;
+
+div#chatMessageContainer {
+	border: none !important;
+	border-radius: 10px !important
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
 }
 
-/* 30 */
-input,select,textarea{
-text-shadow:none !important;
+
+button#label_currentChannel /* Channel Button ie. Main, Sales */ {
+  background-color: var(--third-color)!important;
+  color: var(--text-color)!important;
+	border: none !important
 }
 
-/* 31 */
-.item-header{
-border-radius:10px !important;
+
+
+
+/*-------------------------*/
+/*Comment Box CODE BY HOK-Z*/
+/*-------------------------*/
+#commentBox {
+  background-color: var(--third-color)!important;
+ border:none!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
 }
 
-/* 32 */
-.item{
-border-radius:10px !important;
+
+div.comment {background:none!important;
+            border-bottom: 1px solid #f5e5d1;
+            font-weight: none;}
+
+
+div#makeComment {  background-color: var(--third-color)!important;
+
+
+box-shadow: 2px 1px 4px 2px #1e1e76!important;                border: none;
+                border-radius: 15px;}
+
+
+div.commentText {  color: var(--text-color)!important;
 }
 
-/* 33 */
-div.slider.round{
-background:#fffbfc!important;
+
+input#comment {   background-color: var(--second-color)!important;
+
+
+
+
+               color: var(--text-color)!important;
 }
 
-/* 34 */
-div.container.footer.center.white.visible-lg.visible-md.visible-sm,
-div.container.footer.center.white.visible-lg.visible-md.visible-sm a{
-text-shadow:none !important;
+
+input[type="button"].bad {   background-color: var(--second-color)!important;
+
+
 }
 
-/* 35 */
-::-webkit-scrollbar{
-width:10px;
+
+.commentTag.clear {border: none;}
+
+
+.text-muted{  
+color: var(--text-color-2)!important;
 }
 
-/* 36 */
-::-webkit-scrollbar-thumb{
-border-radius:10px !important;
+
+/* LION INFO TABLE (Level, Stats, Territory Count, Etc.) */
+
+
+
+
+/* PANEL BACKGROUND COLOR */
+
+
+.table {
+  background-color: var(--second-color)!important;
+	border: none !important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border-collapse: separate;
+	border-radius: 10px !important
 }
 
-/* 37 */
-div#lion_image{
-margin-left:12px;
-width:300px;
-height:200px;
-animation:mymove 5s infinite;
+
+
+
+/* HEADERS COLOR (King Name + Title, "There are _ lions with mutations in _'s pride.") */
+
+
+.top,
+.bottom,
+th {
+  background-color: var(--third-color)!important;
+  color: var(--text-color)!important;
+	border-radius: 10px !important
 }
 
-/* REMOVIDA CHAVE EXTRA */
 
-/* 38 */
-table#player img{
-overflow:hidden;
-width:190px;
-height:150px;
-animation:mymove 5s infinite;
+td.bottom a {
+        text-decoration: none !important
 }
 
-/* REMOVIDA CHAVE EXTRA */
 
-/* 39 */
-img[src$="cavedefault.jpg"]{
-border-radius:10px 10px 0px 0px;
+/* Color behind "Level, Stats, Branch, Territory" etc. */
+
+
+.inner-table .left {
+  background-color: var(--first-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+  color: var(--text-color)!important;
+	border-radius: 10px !important
 }
 
-/* 40 */
-img[src$="caveunused.jpg"]{
-border-radius:10px 10px 0px 0px;
+
+
+
+/* Color behind the number of all of the things above */
+
+
+.inner-table .right {
+	background: none;
+	border-radius: 10px !important
 }
 
-/* 41 */
-.mound-grid img{
-padding-right:150px;
+
+td.right {
+	border-radius: 10px !important
 }
 
-/* 42 */
-/* MEDIA QUERY ORIGINAL ESTAVA INVÁLIDA */
-@media only screen and (max-width:991px) and (min-width:768px){
-.container.main{
-display:block !important;
-}
+
+/* IGNORE */
+.right_odd {
+	background: none !important
 }
 
-/* 43 */
+
+/* Affects the color behind "_ Unsorted", "_ Pregnant Lionesses", "View Pride Overview", and cave/mound names */
+
+
+.cave-grid,
+.mound-grid {
+  background-color: var(--first-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border: none !important;
+	border-radius: 10px !important
+}
+
+
+/* FEED ALL, PLAY ALL */
+
+
+.feature {
+  background-color: var(--first-color)!important;
+  color: var(--text-color)!important;
+	border:none !important;
+	border-radius: 10px !important
+}
+
+
+/* "King Dynasty, Pride Dynasty, Achievements, Showcase" Panels */
+
+
+.feature,
+div.left {
+  background-color: var(--first-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border: none!important;
+	border-radius: 10px !important
+}
+
+
+/* Block of color behind "Territory Description, Player Name, Avatar URL" etc. */
+
+
+.table .left {
+  background-color: var(--third-color)!important;
+  color: var(--text-color)!important;
+	border-radius: 10px !important
+}
+
+
+/* Color behind the content of the elements listed above */
+
+
+input,
+select,
+textarea {
+  background-color: var(--first-color)!important;
+	border: none !important;
+	border-radius: 10px !important;
+  color: var(--text-color)!important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	text-shadow: none !important
+}
+
+
+/* ACCOUNT OPTIONS PANELS  (Friend Requests Toggles, etc.) */
+
+
+.item-header {
+  background-color: var(--first-color)!important;
+  color: var(--text-color)!important;
+	border-radius: 10px !important
+}
+
+
+.item {
+  background-color: var(--first-color)!important;
+	border: none !important;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+	border-radius: 10px !important
+}
+
+
+/* ACCOUNT OPTIONS ON/OFF TOGGLE SWITCH */
+
+
+div.slider.round /* Background */ {
+	background: #fffbfc!important
+}
+
+
+div.slider.round::before /* Circle Part */ {
+	background: #111538!important;
+}
+
+
+/* Copyright, Terms of Service, CoC, etc. */
+
+
+div.container.footer.center.white.visible-lg.visible-md.visible-sm, div.container.footer.center.white.visible-lg.visible-md.visible-sm a {
+  color: var(--text-color)!important;
+        text-shadow: none !important
+}
+
+
+/* LINK COLOR */
+
+
+a:link,
+a:visited {
+  color: var(--text-color-2)!important;
+}
+
+
+/* LINK HOVER COLOR */
+
+
+a:hover {
+  color: var(--text-color)!important;
+}
+
+
+/* SCROLL BAR */
+
+
+/* WIDTH */
+
+
+::-webkit-scrollbar {
+	width: 10px
+}
+
+
+
+
+/* BACKGROUND */
+
+
+::-webkit-scrollbar-track {
+	background: #f2a1f2;
+}
+
+
+
+
+/* "THUMB" */
+
+
+::-webkit-scrollbar-thumb {
+	background: #1e1e76;
+	border-radius: 10px !important
+}
+
+
+
+
+/* lion and user avatar opacity */
+div#lion_image {
+	opacity: .8;
+	box-shadow:  1px 1px 5px var(--darkgray)!important;
+}
+div#lion_image:hover {
+	opacity: 1;
+	box-shadow:  1px 1px 5px var(--darkgray)!important;
+	transition: .7s!important;
+}	
+table#player img {
+	opacity: 0.8;
+	box-shadow:  1px 1px 5px var(--darkgray)!important;
+}
+table#player img:hover {
+	opacity: 1;
+	box-shadow:  1px 1px 5px var(--darkgray)!important;
+	transition: .7s!important;
+}
+
+
+
+
+/* CIRCULAR LION AND USER AVATAR */
+
+
+div#lion_image {
+	border-radius: 20% !important;
+	overflow: hidden;
+	margin-top: 15px; /* May need adjusting */
+	margin-left: 12px /* May need adjusting */
+width: 300px;
+  height: 200px;
+  border: 10px double #f2a1f2;
+  animation: mymove 5s infinite;}
+}
+
+
+@keyframes mymove {
+  50% {border: 10px double #1e1e76;}
+}
+
+
+@keyframes mymove {
+  50% {border: 10px double #1e1e76;}
+}
+
+
+table#player img {
+	border-radius: 20% !important;
+	overflow: hidden
+width: 190px;
+  height: 150px;
+  border: 10px double #f2a1f2;
+  animation: mymove 5s infinite;}
+}
+
+
+@keyframes mymove {
+  50% {border: 10px double #1e1e76;}
+}
+
+
+@keyframes mymove {
+  50% {border: 10px double #1e1e76;}
+}
+
+
+img[src$="nestingbanner.png"] {
+  content: url("https://i.pinimg.com/736x/a6/f2/c2/a6f2c242dcec457e35bc6869f55f9703.jpg") !important;
+height: 100px !important;
+}
+
+
+img[src$="overviewbanner.png"] {
+  content: url("https://i.pinimg.com/736x/a6/f2/c2/a6f2c242dcec457e35bc6869f55f9703.jpg") !important;
+height: 100px !important;
+
+
+}
+
+
+img[src$="unsortedlionsbanner.png"] {
+  content: url("https://i.pinimg.com/736x/a6/f2/c2/a6f2c242dcec457e35bc6869f55f9703.jpg") !important;
+border-radius: 0px;
+height: 100px !important;
+
+
+}
+
+
+img[src$="cavedefault.jpg"] {
+  content: url("https://i.pinimg.com/736x/23/6e/10/236e10857703944a7ecbc29a24e76f42.jpg") !important;
+height: 150px !important;
+border-radius: 10px 10px 0px 0px
+}
+
+
+img[src$="caveunused.jpg"] {
+  content: url("https://i.pinimg.com/736x/23/6e/10/236e10857703944a7ecbc29a24e76f42.jpg") !important;
+height: 150px !important;
+border-radius: 10px 10px 0px 0px
+}
+
+
+.mound-grid img /* Mound(s) */ {
+	background: url("https://i.pinimg.com/736x/a6/f2/c2/a6f2c242dcec457e35bc6869f55f9703.jpg");
+border-radius: 10px;
+	width: 0;
+	height: 0;
+	padding-top: 50px;
+	padding-right: 150px
+}
+
+
+/* LIODEN LOGO REPLACER */
+
+
+div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
+	content: url('');
+visibility: hidden;
+width: 130px;
+}
+
+
+/* MAKES BOXES/DESCRIPTION SHOW ON MOBILE */
+
+
+@media only screen and (max-width: 767px) {
+        .container.main .hidden-xs {
+            display: block !important;
+        }
+}
+
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+	display: block !important;
+}
+
+
+@media only screen and (min-width: 1200px) {
+		div.quote {
+			width: 790px;
+		}
+	}
+
+
 .scroll{
-border-radius:10px;
+  background-color: var(--third-color)!important;
+    border: none;
+    float: left;
+    width: 45%;
+color:#a195f9;
+    height: 300px;
+    padding: 20px;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+  font-family: "Chewy", serif;
+    margin:-50px 1px 20px 8px;
+    font-size: 20px;
+overflow-y: auto!important;
+border-radius:10px
 }
 
-/* 44 */
+
 .links{
-border-radius:10px 10px 0px 0px;
+  background-color: var(--first-color)!important;
+  float: left;
+    width: 100%;
+    height: 60px;
+    margin: 10px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+margin-left: 0px;
+    padding: 18px;
+    color: #f2a1f2;
+  font-family: "Chewy", serif;
+    text-align: center;
+    font-size: 17px;
+border-radius:10px 10px 0px 0px
 }
+
+
+.credit{
+text-align:center;
+float:left;
+    margin-left: 190px;
+color: #f2a1f2;
+margin-top:-85px;
+  font-family: "Chewy", serif;
+vertical-align:bottom}
+
+
+.backgroundimg{
+    background: url(https://cdn.wallpapersafari.com/79/75/cYDHCb.jpg)center;
+background-size: cover;
+    width: 70%;
+height:420px;
+    border: none;
+border-radius:3%;
+    border-spacing: 0;
+    border-collapse: collapse;
+box-shadow: 2px 1px 4px 2px #1e1e76!important;
+
+
+}
+
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol26.cur), auto !important;} /* End https://www.cursors-4u.com */
